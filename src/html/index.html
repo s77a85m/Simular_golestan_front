@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <script defer src="../js/alpine.js"></script>
+    <title>Document</title>
+</head>
+
+<body dir="rtl" class="bg-gray-200">
+    <!-- navbar start-->
+    <nav class="h-16 w-full px-10 bg-stone-300">
+        <section class="container h-full flex flex-row-reverse justify-between items-center">
+            <!-- login button -->
+            <div x-data="registerMenu">
+                <button x-on:click="openmenu()" class="px-10 py-2 active:scale-90 bg-cyan-300 rounded-full shadow-md shadow-gray-400">
+                    <span class="text-sm font-serif font-bold ">ورود به سیستم</span>
+                </button>
+                <!-- signIn & singUp  -->
+                <div x-show="openMenu"x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 " x-transition:enter-end="opacity-0 " 
+                    x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-0" 
+                    x-transition:leave-end="opacity-0" x-cloak class="fixed inset-0 flex items-center justify-center bg-gray-900 opacity-0">
+                </div>
+                <!-- retister page -->
+                <div x-show="openMenu"x-transition:enter="transition ease-out duration-500"
+                    x-transition:enter-start="opacity-0 " x-transition:enter-end="opacity-100 " 
+                    x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100" 
+                    x-transition:leave-end="opacity-0" x-cloak class="fixed inset-0 z-10 flex items-center justify-center">
+                    <div x-on:click.away="closmenu()" class="bg-white relative rounded-md flex flex-col gap-3 p-3">
+                        <!-- select type -->
+                        <div class="flex justify-center gap-20">
+                            <span x-on:click="loginForm()" x-cloak x-bind:class="{'bg-gray-300 rounded-md' : formType=='login'}" class="text-style cursor-pointer p-2">ورود به سیستم</span>
+                            <span x-on:click="registerForm()" x-cloak x-bind:class="{'bg-gray-300 rounded-md' : formType=='register'}" class="text-style p-2 cursor-pointer">ثبت نام دانشجو</span>
+                        </div>
+                        <!-- loginForm -->
+                        <form x-show="formType=='login'" x-cloak id="loginForm" accept="#" class="w-[570px] flex  mt-10 gap-10 flex-col">
+                            <div class="flex flex-row gap-2">
+                                <!-- inputs -->
+                                <div class="flex flex-col gap-2 flex-none w-[380px]">
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="uid" class="text-style flex items-center">نام کاربری:</label>
+                                        <input autocomplete="off" type="text" id="uid" dir="ltr" name="uid" class="w-3/4 bg-gray-200 h-9 px-3 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="pass" class="text-style flex items-center">رمز عبور:</label>
+                                        <input autocomplete="off" type="text" id="pass" dir="ltr" name="password" class="w-3/4 bg-gray-200 px-3 text-left h-9 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <div class="flex justify-start pr-[53px] gap-1 flex-row">
+                                        <label for="capcha" class="text-style flex items-center">کد کپچا:</label>
+                                        <input autocomplete="off" type="text" id="capcha" dir="ltr" name="capcha" class="w-1/3 bg-gray-200 px-3 text-left h-9 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                </div>
+                                <!-- capcha -->
+                                <div class="flex-1 px-3">
+                                    <div class="bg-red-200 rounded-md h-full w-full flex-center">1234</div>
+                                </div>
+                            </div>
+                            <!-- submit -->
+                            <div class="w-full flex-center">
+                                <button class="bg-green-600 shadow-md shadow-gray-500 px-10 py-2 text-white rounded-sm text-style">ورود</button>
+                            </div>
+                        </form>
+                        <!-- registerForm -->
+                        <form x-show="formType=='register'" x-cloak id="registerForm" action="#" enctype="multipart/form-data" class="w-[800px] flex mt-10 gap-10 flex-col">
+                            <div class="w-full flex gap-2 flex-row">
+                                <!-- part1 -->
+                                <div class="flex-1 flex-col flex gap-2">
+                                    <!-- name -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="name" class="after:content-['*'] after:text-red-500 text-style flex items-center">نام</label>
+                                        <input autocomplete="off" type="text" id="name"  name="name" class="w-3/4 text-style bg-gray-200 h-9 px-3 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <!-- lastname -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="lastname" class="after:content-['*'] after:text-red-500 text-style flex items-center">نام خانوادگی</label>
+                                        <input autocomplete="off" type="text" id="lastname"  name="lastname" class="w-3/4 text-style bg-gray-200 h-9 px-3 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <!-- meliCode -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="melicode" class="after:content-['*'] after:text-red-500 text-style flex items-center">شماره ملی</label>
+                                        <input autocomplete="off" type="text" id="melicode" dir="ltr" name="melicode" class="w-3/4 bg-gray-200 h-9 px-3 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <!-- phone -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="phone" class="after:content-['*'] after:text-red-500 text-style flex items-center">موبایل</label>
+                                        <input autocomplete="off" type="text" id="phone" dir="ltr" name="phone" class="w-3/4 bg-gray-200 h-9 px-3 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <!-- email -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="email" class="after:content-['*'] after:text-red-500 text-style flex items-center">ایمیل</label>
+                                        <input autocomplete="off" type="text" id="email" dir="ltr" name="email" class="w-3/4 bg-gray-200 h-9 px-3 rounded-md focus:ring-0 focus:outline-none">
+                                    </div>
+                                    <!-- degri -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="degri" class="after:content-['*'] after:text-red-500 text-style flex items-center">مقطع تحصیلی</label>
+                                        <select name="degri" id="degri" class="w-3/4 text-style bg-gray-100 h-9 px-2 rounded-md focus:ring-0 focus:outline-none">
+                                            <option selected disabled>مقطع تحصیلی </option>
+                                            <option value="1">کارشناسی ارشد</option>
+                                            <option value="2">کارشناسی ناپیوسته</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- part2 -->
+                                <div class="flex-1 flex-col">
+                                    <!-- upload image -->
+                                    <div class="flex-col flex-center">
+                                        <label class="hover:cursor-pointer" for="image">
+                                            <div class="flex-center "><img src="../image/user.jpg" class="" alt="user"></div>
+                                        </label>
+                                        <input  id="image" type="file" name="image" class="invisible">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                    <!-- field -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="field" class="after:content-['*'] after:text-red-500 text-style flex items-center">رشته تحصیلی</label>
+                                        <select name="field" id="field" class="w-3/4 text-style bg-gray-100 h-9 px-2 rounded-md focus:ring-0 focus:outline-none">
+                                            <option selected disabled>رشته تحصیلی</option>
+                                            <option value="1">مهندسی برق</option>
+                                            <option value="2">مهندسی کامپیوتر</option>
+                                            <option value="2">مهندسی صنایع</option>
+                                            <option value="2">مهندسی مکانیک</option>
+                                        </select>
+                                    </div>
+                                    <!-- degri -->
+                                    <div class="flex gap-1 justify-end flex-row">
+                                        <label for="trend" class="after:content-['*'] after:text-red-500 text-style flex items-center">گرایش</label>
+                                        <select name="trend" id="trend" class="w-3/4 text-style bg-gray-100 h-9 px-2 rounded-md focus:ring-0 focus:outline-none">
+                                            <option selected disabled>مقطع تحصیلی </option>
+                                            <option value="1">کارشناسی ارشد</option>
+                                            <option value="2">کارشناسی ناپیوسته</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- submit -->
+                            <div class="w-full flex-center">
+                                <button class="bg-green-600 shadow-md shadow-gray-500 px-10 py-2 text-white rounded-sm text-style">ثبت نام</button>
+                            </div>
+                        </form>
+                        <!-- close register -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" x-on:click="closmenu()" class="w-6 cursor-pointer rounded-full shadow-md text-red-500 top-2 left-2 absolute h-6">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
+                        </svg>
+                        <ul x-show="formType=='login'" class="list-disc  flex flex-col gap-3 absolute -bottom-20 right-5">
+                            <li class="text-style">نام کاربری شماره دانشجویی و رمز عبور شماره ملی می باشد.</li>
+                            <li class="text-style">از کیبورد انگلیسی استفاده کنید.</li>
+                        </ul>                      
+                        <ul x-show="formType=='register'" class="list-disc flex flex-col gap-3 absolute -bottom-10 right-5">
+                            <li class="text-style">موارد دارای * نباید خالی باشند.</li>
+                        </ul>                      
+                    </div>
+                </div>
+            </div>
+            <!-- start logo and title-->
+            <div class="flex gap-2 h-full items-center">
+                <a href="£">
+                    <img src="../image/iut-logo-690.png" class="h-11 w-11 rounded-full" alt="">
+                </a>
+                <div class="h-full flex items-center">
+                    <span class="text-sm font-serif font-bold  ">شبیه سازی سیستم گلستان دانشگاه صنعتی اصفهان</span>
+                </div>
+            </div>
+            <!-- end logo -->
+        </section>
+    </nav>
+    <!-- end navbar -->
+    <!-- start main -->
+    <main class="w-full p-16">
+        <!-- Announcements -->
+        <div class="flex gap-5 flex-col">
+            <h1 class="text-lg font-bold font-serif">اخبار و اطلاعیه ها</h1>
+            <ul class="list-disc text-style font-bold flex flex-col gap-5 px-4">
+                <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</li>
+                <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و بسادگی نامفهوم از صنعت چاپ اسادگی
+                    نامفهوم از صنعت ی نامفهوم از صنعت چاپ استفاده از طراحان گرافیک است</li>
+                <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ سادگی نامفهوم از صنعت چاپ سادگی نامفهوم از
+                    صنعت چاپ و با استفاده از طراحان گرافیک است</li>
+                <li>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ سادگی نامفهوم از صنعت چسادگی نامفهوم از
+                    صنعت چااپ سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</li>
+            </ul>
+        </div>
+    </main>
+    <!-- end main -->
+
+    <!-- scripts -->
+    <script>
+        function registerMenu() {
+            return {
+                openMenu: false,
+                formType: "login",
+                openmenu(){
+                    this.openMenu = true;
+                    this.formType = "login"
+                },
+                closmenu(){
+                    this.openMenu = false;
+                    document.getElementById("loginForm").reset();
+                    document.getElementById("registerForm").reset();
+                },
+                loginForm(){
+                    this.formType = "login"
+                },
+                registerForm(){
+                    this.formType = "register"
+                },
+
+            }
+        }
+    </script>
+</body>
+
+</html>
