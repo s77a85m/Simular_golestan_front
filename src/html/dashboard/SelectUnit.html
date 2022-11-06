@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dist/output.css">
+  <title>Document</title>
+</head>
+<body dir="rtl" class="bg-gray-100">
+<!--start navbar  -->
+<nav class="flex flex-row justify-between w-full px-8 bg-white shadow-sm h-14">
+  <!-- hamberger Menu -->
+  <div class="h-full flex-center">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 cursor-pointer hover:shadow-md transition-all duration150 ease-in-out h-8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  </div>
+  <!-- avatar -->
+  <div class="h-full flex-center ">
+    <img src="../../image/user.jpg" class="w-10 h-10 rounded-full" alt="avatar">
+  </div>
+</nav>
+<!-- end navbar -->
+<!-- start main -->
+<main class="container h-full">
+  <div class="m-5 bg-gray-200 h-[600px] flex flex-col rounded-md ">
+    <!--            title -->
+    <div class="w-full flex flex-row justify-between items-center px-3 py-4">
+      <span class="text-style font-bold">انتخاب واحد</span>
+      <img src="../../image/iut-logo-690.png" class="w-9 h-9" alt="IUT">
+    </div>
+    <!--            content -->
+    <div class="w-full  px-10 h-full flex  flex-col">
+      <!--        table for select -->
+      <div class="w-full pt-0 p-2"><span class="font-bold text-sm">لیست دروس قابل اخذ</span></div>
+      <div class="h-[172px] rounded-md overflow-y-auto">
+        <table class="table w-full bg-white rounded-md  shadow-md">
+          <thead>
+            <tr>
+              <th class="border-2  sticky top-0 w-8 border-gray-300 border-t-0 border-b-gray-500 bg-white  border-l-0 border-r-0">گروه</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">شماره درس</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">نام درس</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">نام استاد</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">تاریخ کلاس</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">تاریخ امتحان</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">ظرفیت</th>
+              <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">فرایند</th>
+            </tr>
+          </thead>
+          <tbody class="text-center " >
+            <tr class="text-sm">
+              <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+              <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+                <span>1401/11/21</span>
+                <span>9-11</span>
+              </td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0"><a href="#" class=" p-0.5 px-1 text-xs text-white rounded-sm bg-green-500">ثبت</a></td>
+            </tr>
+            <tr class="text-sm">
+              <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+              <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+                <span>1401/11/21</span>
+                <span>9-11</span>
+              </td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0"><a href="#" class=" p-0.5 px-1 text-xs text-white rounded-sm bg-green-500">ثبت</a></td>
+            </tr>
+            <tr class="text-sm">
+              <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+              <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+                <span>1401/11/21</span>
+                <span>9-11</span>
+              </td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0"><a href="#" class=" p-0.5 px-1 text-xs text-white rounded-sm bg-green-500">ثبت</a></td>
+            </tr>
+            <tr class="text-sm">
+              <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+              <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+                <span>1401/11/21</span>
+                <span>9-11</span>
+              </td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0"><a href="#" class=" p-0.5 px-1 text-xs text-white rounded-sm bg-green-500">ثبت</a></td>
+            </tr>
+            <tr class="text-sm">
+              <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+              <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+                <span>1401/11/21</span>
+                <span>9-11</span>
+              </td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0"><a href="#" class=" p-0.5 px-1 text-xs text-white rounded-sm bg-green-500">ثبت</a></td>
+            </tr>
+            <tr class="text-sm">
+              <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+              <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+                <span>1401/11/21</span>
+                <span>9-11</span>
+              </td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+              <td class="border-2 border-gray-300 border-b-0 border-l-0"><a href="#" class=" p-0.5 px-1 text-xs text-white rounded-sm bg-green-500">ثبت</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<!--      info of selected -->
+      <div class="w-full justify-between mt-4 flex flex-row border-t border-gray-300 rounded-md p-2">
+        <div class=" flex justify-start items-center">
+          <span class="font-bold text-sm">لیست دروس انتخاب شده</span>
+        </div>
+        <div class=" flex justify-start items-center">
+          <span class=" text-sm">حد اکثر واحد قابل اخذ: 14</span>
+        </div>
+        <div class=" flex justify-start items-center">
+          <span class=" text-sm">تعداد واحد اخذ شده: 12</span>
+        </div>
+      </div>
+<!--      table of selected items-->
+      <div class="h-[210px] bg-white rounded-md overflow-y-auto">
+        <table class="table w-full bg-white rounded-md ">
+          <thead>
+          <tr>
+            <th class="border-2  sticky top-0 w-8 border-gray-300 border-t-0 border-b-gray-500 bg-white  border-l-0 border-r-0">گروه</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">شماره درس</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">نام درس</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">نام استاد</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">تاریخ کلاس</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">تاریخ امتحان</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">ظرفیت</th>
+            <th class="border-2 sticky top-0 border-gray-300 border-t-0 border-b-gray-500 bg-white border-l-0">فرایند</th>
+          </tr>
+          </thead>
+          <tbody class="text-center " >
+          <tr class="text-sm">
+            <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+            <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+              <span>1401/11/21</span>
+              <span>9-11</span>
+            </td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+            <td class="border-2 border-gray-300 border-b-0 text-green-500 border-l-0">ثبت شده</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+            <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+              <span>1401/11/21</span>
+              <span>9-11</span>
+            </td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+            <td class="border-2 border-gray-300 border-b-0 text-green-500 border-l-0">ثبت شده</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+            <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+              <span>1401/11/21</span>
+              <span>9-11</span>
+            </td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+            <td class="border-2 border-gray-300 border-b-0 text-green-500 border-l-0">ثبت شده</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+            <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+              <span>1401/11/21</span>
+              <span>9-11</span>
+            </td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+            <td class="border-2 border-gray-300 border-b-0 text-green-500 border-l-0">ثبت شده</td>
+          </tr>
+          <tr class="text-sm">
+            <td class="border-2 border-r-0 border-gray-300 border-b-0 border-l-0">1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">123456789-1</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">مهندسی نرم افزار پیشرفته</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">الهام محمودزاده</td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">شنبه-13:30-15</td>
+            <td class="flex-style flex-row  gap-2 border-2 border-gray-300 border-b-0 border-l-0">
+              <span>1401/11/21</span>
+              <span>9-11</span>
+            </td>
+            <td class="border-2 border-gray-300 border-b-0 border-l-0">8/10</td>
+            <td class="border-2 border-gray-300 border-b-0 text-green-500 border-l-0">ثبت شده</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+<!--      submit -->
+      <div class="w-full flex mt-2 justify-between flex-row">
+        <div class="p-2">
+          <span class="text-sm">تذکر: قبل از خروج از صفحه تغییرات را ذخیره نهایی کنید</span>
+        </div>
+        <div>
+          <button class="px-3 py-2 rounded-md bg-green-500 text-white text-sm"> ذخیره نهایی تغییرات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
