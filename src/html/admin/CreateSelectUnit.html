@@ -118,13 +118,13 @@
     <!-- start main -->
     <main class="container h-full">
       <div class="m-5 bg-gray-200 h-[600px] flex flex-col rounded-md ">
-        <!--            title -->
-        <div class="w-full flex flex-row justify-between items-center px-3 py-4">
+        <!--            title this file changed py to pt -->
+        <div class="w-full flex flex-row justify-between items-center px-3 pt-4">
           <span class="text-style font-bold">انتخاب واحد</span>
           <img src="../../image/iut-logo-690.png" class="w-9 h-9" alt="IUT">
         </div>
-        <!--            content -->
-        <div class="w-full py-5 px-10 h-full flex justify-between flex-col">
+        <!--            content in this file changed py to pb -->
+        <div class="w-full pb-5 px-10 h-full flex justify-start flex-col">
           <!--        table -->
           <div x-data="newProfessor" class="flex flex-col gap-3">
             <div class="w-full flex flex-row justify-between">
@@ -200,6 +200,10 @@
                           <option selected value="">محمد دخیل علیان</option>
                           <option value="">احسان محدوی</option>
                         </select>
+                      </div>
+<!--                      submit unit -->
+                      <div class="mt-24">
+                        <button class="p-2 rounded-md bg-blue-500 text-white text-sm hover:shadow-md shadow-gray-400">اضافه کردن درس</button>
                       </div>
                     </div>
 <!--                    left of left-->
@@ -330,6 +334,114 @@
 
             </div>
             <!--        end create request -->
+          </div>
+<!--          selected unit -->
+          <div class="w-full h-[130px] overflow-y-auto flex  flex-col rounded-md bg-gray-100">
+<!--            list unit -->
+            <table class="">
+              <thead>
+                <tr class="bg-gray-100 shadow-md sticky top-0">
+                  <th class="">ردیف</th>
+                  <th class="">نام درس</th>
+                  <th class="">تعداد واحد</th>
+                  <th class="">استاد</th>
+                  <th class="">تاریخ کلاس</th>
+                  <th class="">تاریخ امتحان</th>
+                  <th class="">فرآیند</th>
+                </tr>
+              </thead>
+              <tbody class="overflow-scroll">
+                <tr class="text-center text-xs">
+                  <td class="pt-2">1</td>
+                  <td>مهندسی نرم افزار پیشرفته</td>
+                  <td>3</td>
+                  <td>الهام محمودزاده</td>
+                  <td>شنبه 10-12:30</td>
+                  <td>21/5/1401 14-16:30</td>
+                  <td class="">
+                    <div class="h-full w-full flex-center">
+                      <a href="#" class="rounded-sm overflow-hidden flex w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 text-white bg-red-500 h-4">
+                          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="text-center text-xs">
+                  <td class="pt-2">1</td>
+                  <td>مهندسی نرم افزار پیشرفته</td>
+                  <td>3</td>
+                  <td>الهام محمودزاده</td>
+                  <td>شنبه 10-12:30</td>
+                  <td>21/5/1401 14-16:30</td>
+                  <td class="">
+                    <div class="h-full w-full flex-center">
+                      <a href="#" class="rounded-sm overflow-hidden flex w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 text-white bg-red-500 h-4">
+                          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="text-center text-xs">
+                  <td class="pt-2">1</td>
+                  <td>مهندسی نرم افزار پیشرفته</td>
+                  <td>3</td>
+                  <td>الهام محمودزاده</td>
+                  <td>شنبه 10-12:30</td>
+                  <td>21/5/1401 14-16:30</td>
+                  <td class="">
+                    <div class="h-full w-full flex-center">
+                      <a href="#" class="rounded-sm overflow-hidden flex w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 text-white bg-red-500 h-4">
+                          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="text-center text-xs">
+                  <td class="pt-2">1</td>
+                  <td>مهندسی نرم افزار پیشرفته</td>
+                  <td>3</td>
+                  <td>الهام محمودزاده</td>
+                  <td>شنبه 10-12:30</td>
+                  <td>21/5/1401 14-16:30</td>
+                  <td class="">
+                    <div class="h-full w-full flex-center">
+                      <a href="#" class="rounded-sm overflow-hidden flex w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 text-white bg-red-500 h-4">
+                          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="text-center text-xs">
+                  <td class="pt-2">1</td>
+                  <td>مهندسی نرم افزار پیشرفته</td>
+                  <td>3</td>
+                  <td>الهام محمودزاده</td>
+                  <td>شنبه 10-12:30</td>
+                  <td>21/5/1401 14-16:30</td>
+                  <td class="">
+                    <div class="h-full w-full flex-center">
+                      <a href="#" class="rounded-sm overflow-hidden flex w-fit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 text-white bg-red-500 h-4">
+                          <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<!--          final submit -->
+          <div class="py-2">
+            <button class="p-1 text-xs bg-green-500 text-white rounded-sm shadow-md shadow-gray-400">ثبت نهایی</button>
           </div>
         </div>
       </div>
